@@ -1,0 +1,20 @@
+#nev_tabla {
+    background-color: green;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 600px;
+    margin-right: 600px;
+    padding: 2px;
+}
+#nev_tabla h1 {
+    color: white;
+}
+#adat_tabla {
+    width: 80%;
+    margin-left: 600px;
+    margin-right: auto;
+    border-collapse: collapse;
+}
