@@ -7,28 +7,49 @@
     <title>Futási napló</title>
 </head>
 <body>
-<<<<<<< HEAD
     <div id="nev_tabla">
-    <h1 align="center">Futási napló</h1>
-</div>
-    <div id="adat_tabla">
-    <table>
+        <h1 align="center">Futási napló</h1>
+    </div>
+
+<!-- bekérések -->
+
+    <div class="kontener">
         <input type="date" id="datum" placeholder="Dátum">
         <input type="number" id="idotartam" placeholder="Időtartam">
         <input type="number" id="tavolsag" placeholder="Távolság">
         <input type="number" id="atlagsebesseg" placeholder="Átlagsebesség">
         <input type="number" id="kaloria" placeholder="Kalória">
-
-        <button id="hozzaad">Hozzáadás</button>
-       
+        <button id="hozzaad" onclick="Rogzites()">Hozzáadás</button>
     </div>
-    <div id="bejegyzesek">
+    <div class="kontener" style="margin-bottom: 16px;">
+        <label for="cel">Napi táv cél (km):</label>
+        <input type="number" id="cel" placeholder="Pl. 5">
+        <button onclick="celBeallitas()">Cél beállítása</button>
+        <span id="cel_kiiras" style="margin-left: 10px; color: green;"></span>
+    </div>
+        <h2 style="text-align: left; margin-left: 20px;">Futások listája</h2>
+
+    <!-- táblázat helye -->
+    <div id="adat_tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Dátum</th>
+                    <th>Időtartam (perc)</th>
+                    <th>Távolság (km)</th>
+                    <th>Átlagsebesség (km/h)</th>
+                    <th>Kalória (kcal)</th>
+                </tr>
+            </thead>
+            <tbody id="tabla_torzs">
+                <!-- Itt jelennek meg a futások -->
+            </tbody>
+        </table>
 
     </div>
-<script src="script.js"></script>
-=======
-    <h1>Futási napló</h1>
+    <h1 style="margin-left: 16px;">Összesítés</h1>
+    <button onclick="osszesites()" style="margin-left: 16px;">Összesítés</button>
+
     <script src="script.js"></script>
->>>>>>> 9df73ac86cbca518e254548a1a7206c82965d49f
 </body>
 </html>
