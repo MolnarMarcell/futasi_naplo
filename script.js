@@ -3,9 +3,9 @@ function Rogzites() {
     let idotartam = parseInt(document.getElementById("idotartam").value);
     let tavolsag = parseInt(document.getElementById("tavolsag").value);
     let atlagsebesseg = parseInt(document.getElementById("atlagsebesseg").value);
-    let kaloria = parseInt(document.getElementById("kaloria").value);
+    let suly = parseInt(document.getElementById("suly").value);
 
-    if (isNaN(idotartam) || isNaN(tavolsag) || datum === "" || atlagsebesseg === "" || kaloria === "") {
+    if (isNaN(idotartam) || isNaN(tavolsag) || datum === "" || atlagsebesseg === "" || suly === "") {
         alert("Kérem, töltse ki az összes mezőt helyesen!");
         return;
     }
@@ -17,7 +17,7 @@ function Rogzites() {
         <td>${idotartam}</td>
         <td>${tavolsag}</td>
         <td>${atlagsebesseg}</td>
-        <td>${kaloria}</td>
+        <td>${suly*7.7*idotartam/60}</td>
         <td><button onclick="this.parentElement.parentElement.remove()">Törlés</button></td>
         <td><button onclick="szerkesztes(this)">Szerkesztés</button></td>
     `;
@@ -28,7 +28,7 @@ function Rogzites() {
     document.getElementById("idotartam").value = "";
     document.getElementById("tavolsag").value = "";
     document.getElementById("atlagsebesseg").value = "";
-    document.getElementById("kaloria").value = "";
+    document.getElementById("suly").value = "";
 }
 
 // Szerkesztés funkció
